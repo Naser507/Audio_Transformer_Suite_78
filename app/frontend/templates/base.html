@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Audio Transformer Suite 78</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Phase 1 styles -->
+  <link rel="stylesheet" href="/static/css/background.css">
+  <link rel="stylesheet" href="/static/css/glasslayer.css">
+
+  <!-- basic page styles for Phase1 (keeps UI above glass) -->
+  <style>
+    /* Make sure site content sits above glass (z-index higher) */
+    #app-root {
+      position: relative;
+      z-index: 12; /* UI will be above glass (8) and background (0) */
+    }
+    /* small prototyping content */
+    .center-proto {
+      margin: 80px auto;
+      max-width: 900px;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background layer -->
+  <div id="bg-root" aria-hidden="true"></div>
+
+  <!-- Glass layer -->
+  <div id="glass" aria-hidden="true"></div>
+
+  <!-- App UI root -->
+  <div id="app-root">
+    <!-- This is where your header/left panel/main content will be inserted in later phases -->
+    <main class="center-proto">
+      <h1>Audio Transformer Suite 78 — Prototype</h1>
+      <p>Phase 1: background & glass layer are active. Add header and panels in next phases.</p>
+    </main>
+  </div>
+
+  <!-- JS (background cycler) -->
+  <script src="/static/js/background.js"></script>
+</body>
+</html>

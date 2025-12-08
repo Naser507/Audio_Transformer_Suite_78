@@ -1,0 +1,34 @@
+/* background.css - full-viewport background slides */
+:root {
+  --bg-fade-duration: 1200ms;
+}
+
+/* container behind everything */
+#bg-root {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* allow clicks to pass through */
+  background: #000;
+}
+
+/* two-layer crossfade technique */
+.bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity var(--bg-fade-duration) ease-in-out;
+  will-change: opacity, transform;
+}
+
+/* active slide visible */
+.bg-slide.visible {
+  opacity: 1;
+}
+
+/* ensure base sits behind the glass and UI (UI z-index should be > 10) */
+#bg-root { z-index: 0; }
