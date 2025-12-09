@@ -1,3 +1,7 @@
+### Update (2025-12-09 10:20:43)
+Adjusted the glass layer to be a little darker 
+
+
 ### Update (2025-12-09 09:57:47)
 ### Update (2025-12-09 15:02:00)
 - Refactored the `git_push.sh` automation script.
