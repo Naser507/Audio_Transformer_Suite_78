@@ -1,6 +1,6 @@
 /* glasslayer.css - frosted glass overlay above background and below UI */
 :root {
-  --glass-color: 50,50,50; /* RGB for base color; change if you want tinted glass */
+  --glass-color: 10,10,10; /* RGB for base color; change if you want tinted glass */
   --glass-alpha: 0.80; /* opacity: 0.00 - 1.00 */
   --glass-blur: 10px;
 }
