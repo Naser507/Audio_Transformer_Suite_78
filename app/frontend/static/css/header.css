@@ -1,59 +1,120 @@
-/* Floating Header */
+/*
+|--------------------------------------------------------------------------
+| Audio Transformer Suite Header CSS - Times New Roman Revision
+|--------------------------------------------------------------------------
+*/
+
+/* 1. Header Container: Deep Black, Fixed, Classic Look */
 #top-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, #000000, #111111);
-    z-index: 9999;
+    height: 120px;
+    /* Deep background remains */
+    background-color: rgba(10, 10, 20, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    /* --- REMOVED: Blue accent border (border-bottom: 2px solid #00c4ff;) --- */
 }
 
-/* Container inside header */
+/* 2. Inner Content Container (No Change) */
 .header-container {
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 30px; 
+    padding: 0 10px;
 }
 
-/* Logo box */
+/* 3. Logo Box (No Change) */
 .logo-box img {
-    height: 60px;
+    height: 85px;
     width: auto;
+    border-radius: 4px;
+    box-shadow: none; 
+    transition: transform 0.3s ease;
 }
 
-/* Heading box */
+.logo-box img:hover {
+    transform: scale(1.03);
+}
+
+/* 4. Heading Box (No Change) */
 .heading-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-/* Top heading */
+/* 5. Main Title: Times New Roman, Black, All Caps, with Stroke */
 .top-heading {
-    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 24px;
+    /* Set to Times New Roman or a similar classic serif font */
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: 700; /* Bold */
+    color: #000000; 
+    font-size: 32px;
+    letter-spacing: 2px; /* Increased letter-spacing for classic elegance */
+    margin-bottom: 2px;
+    text-transform: uppercase; /* <<-- ALL UPPERCASE */
+    
+    /* Text Shadow Effect: Necessary for legibility of black text on dark background */
+    text-shadow: 
+        1px 1px 0 #ffffff,
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff;
 }
 
-/* Red line */
+/* 6. Accent Separator: Spans Full Length of Heading Text */
 .red-line {
-    width: 100%;
+    /* Removed max-width restriction: it now only respects the width of the heading-box parent */
+    width: 100%; /* <<-- SPANS ENTIRE LENGTH OF HEADING */
     height: 4px;
-    background-color: red;
-    margin: 5px 0;
+    background-color: #e53935;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px #e53935; 
 }
 
-/* Sub-heading */
+/* 7. Sub-heading: Times New Roman, White, All Caps */
 .sub-heading {
-    font-family: Arial, sans-serif;
-    font-weight: normal;
-    color: white;
-    font-size: 16px;
+    /* Set to Times New Roman or a similar classic serif font */
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: 400; /* Regular weight */
+    color: #ffffff; /* <<-- WHITE TEXT */
+    font-size: 17px;
+    align-self: flex-start; 
+    letter-spacing: 1px;
+    text-transform: uppercase; /* <<-- ALL UPPERCASE */
+}
+
+/* 8. Responsive Tweaks (Adjusted for new font sizes) */
+@media (max-width: 992px) {
+    .top-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    #top-header { height: 80px; }
+    .logo-box img { height: 50px; }
+    .top-heading { 
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .sub-heading { 
+        font-size: 14px; 
+        letter-spacing: 0.5px;
+    }
+    .red-line { height: 2px; }
 }
