@@ -1,3 +1,7 @@
+### Update (2025-12-09 10:24:55)
+Adjusted the transition time
+
+
 ### Update (2025-12-09 10:20:43)
 Adjusted the glass layer to be a little darker 
 

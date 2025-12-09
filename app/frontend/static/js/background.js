@@ -7,7 +7,7 @@
 (function () {
   const config = {
     mode: 'shuffle',       // 'shuffle' or 'sequential' - default is shuffle as you requested
-    intervalMs: 9000,      // time between transitions
+    intervalMs: 3500,      // time between transitions
     fadeMs: 1200,          // crossfade duration
     imagesCount: 10,       // how many image files to try (image1..image10)
     prefix: '/static/images/backgrounds/image', // prefix for files
