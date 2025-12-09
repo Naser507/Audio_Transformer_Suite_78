@@ -8,6 +8,7 @@
   <!-- Phase 1 styles -->
   <link rel="stylesheet" href="/static/css/background.css">
   <link rel="stylesheet" href="/static/css/glasslayer.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
 
   <!-- basic page styles for Phase1 (keeps UI above glass) -->
   <style>
@@ -15,6 +16,7 @@
     #app-root {
       position: relative;
       z-index: 12; /* UI will be above glass (8) and background (0) */
+      padding-top: 100px; /* Prevent content from hiding behind header */
     }
     /* small prototyping content */
     .center-proto {
@@ -26,6 +28,7 @@
   </style>
 </head>
 <body>
+  {% include 'header.html' %} 
   <!-- Background layer -->
   <div id="bg-root" aria-hidden="true"></div>
 
