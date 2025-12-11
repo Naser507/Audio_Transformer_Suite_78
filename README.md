@@ -1,3 +1,7 @@
+### Update (2025-12-11 11:31:36)
+We added our first left panel but it needs a lot of style changes before we can move on with that.
+
+
 ### Update (2025-12-09 11:59:08)
 revised header
 

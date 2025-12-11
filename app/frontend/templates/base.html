@@ -5,46 +5,58 @@
   <title>Audio Transformer Suite 78</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Phase 1 styles -->
+  <!-- Phase 1 styles (unchanged) -->
   <link rel="stylesheet" href="/static/css/background.css">
   <link rel="stylesheet" href="/static/css/glasslayer.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
 
-  <!-- basic page styles for Phase1 (keeps UI above glass) -->
+  <!-- Phase 3: new -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/left_panel.css') }}">
+
   <style>
-    /* Make sure site content sits above glass (z-index higher) */
+    /* same as before */
     #app-root {
       position: relative;
-      z-index: 12; /* UI will be above glass (8) and background (0) */
-      padding-top: 100px; /* Prevent content from hiding behind header */
-    }
-    /* small prototyping content */
-    .center-proto {
-      margin: 80px auto;
-      max-width: 900px;
-      color: #fff;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      z-index: 12;
+      padding-top: 130px;
     }
   </style>
 </head>
 <body>
-  {% include 'header.html' %} 
-  <!-- Background layer -->
+
+  <!-- Header (unchanged) -->
+  {% include 'header.html' %}
+
+  <!-- Background layer (unchanged) -->
   <div id="bg-root" aria-hidden="true"></div>
 
-  <!-- Glass layer -->
+  <!-- Glass layer (unchanged) -->
   <div id="glass" aria-hidden="true"></div>
 
-  <!-- App UI root -->
+  <!-- App UI (NEW wrapper added) -->
   <div id="app-root">
-    <!-- This is where your header/left panel/main content will be inserted in later phases -->
-    <main class="center-proto">
-      <h1>Audio Transformer Suite 78 — Prototype</h1>
-      <p>Phase 1: background & glass layer are active. Add header and panels in next phases.</p>
-    </main>
+
+    <!-- NEW wrapper for left panel + content -->
+    <div id="layout">
+
+      <!-- NEW: left panel -->
+      {% include 'left_panel.html' %}
+
+      <!-- Main content area (same content, just moved inside layout) -->
+      <div id="main-content">
+        <main class="center-proto">
+          <h1>Audio Transformer Suite 78 — Prototype</h1>
+          <p>Phase 1: background & glass layer are active. Add header and panels in next phases.</p>
+        </main>
+      </div>
+
+    </div>
   </div>
 
-  <!-- JS (background cycler) -->
+  <!-- JS (unchanged) -->
   <script src="/static/js/background.js"></script>
+  <script src="{{ url_for('static', filename='js/left_panel.js') }}"></script>
+
 </body>
 </html>
+

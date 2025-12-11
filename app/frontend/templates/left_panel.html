@@ -1,0 +1,21 @@
+<div id="left-panel">
+    <div class="lp-logo-container">
+        <img src="/static/images/logos/ATS_Logo.png" alt="ATS Logo">
+    </div>
+
+    <nav class="lp-nav">
+
+        <!-- Main fixed links -->
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contacts</a>
+
+        <hr>
+
+        <!-- 60 test items -->
+        {% for i in range(1, 61) %}
+            <a href="#">Item {{ i }}</a>
+        {% endfor %}
+        
+    </nav>
+</div>

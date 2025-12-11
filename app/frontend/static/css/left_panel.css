@@ -1,0 +1,61 @@
+/* Left panel container */
+#left-panel {
+    position: fixed;
+    top: 130px; /* below header */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 130px);
+    padding: 20px 15px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.25);
+
+    overflow-y: auto;
+    z-index: 12;
+}
+
+/* Logo container */
+.lp-logo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.lp-logo-container img {
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.4));
+}
+
+/* Navigation links */
+.lp-nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 8px;
+    margin: 4px 0;
+    font-size: 15px;
+
+    border-radius: 8px;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.lp-nav a:hover {
+    background: rgba(255,255,255,0.25);
+    padding-left: 14px;
+}
+
+.lp-nav hr {
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin: 15px 0;
+}
+
+/* Main content shifts right because of sidebar */
+#main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
