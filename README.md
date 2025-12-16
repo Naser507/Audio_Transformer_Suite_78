@@ -1,3 +1,7 @@
+### Update (2025-12-16 11:15:42)
+removed the paragraph from the main base page by commenting to make space for the upcoming contents. Added a few blank lines at the end of the lefor UI issues fix.
+
+
 ### Update (2025-12-16 10:45:40)
 Refine header logo alignment and reduce sidebar logo spacing
 
