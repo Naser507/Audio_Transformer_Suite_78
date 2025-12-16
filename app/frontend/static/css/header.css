@@ -35,15 +35,38 @@
 }
 
 /* 2. Inner Content Container: REDUCED HORIZONTAL PADDING */
+
+/* 2. Inner Content Container: Redesigned for Right-Alignment */
+
+/* 2. Inner Content Container: PUSHES THE CONTENT TO THE RIGHT */
 .header-container {
     width: 90%;
     max-width: 1400px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* CHANGE: Push all content to the right */
+    justify-content: flex-end; 
     gap: 30px; 
-    padding: 0 10px; /* <<-- Reduced Padding */
+    padding: 0 10px; 
 }
+
+/* NEW: Container to group Logo and Heading, align them side-by-side */
+.right-aligned-content {
+    display: flex;
+    align-items: center; /* Vertically align them */
+    gap: 15px; /* Small gap between the logo and the text */
+}
+
+/* Update Heading Box to be aligned to the left of the group */
+.heading-box {
+    display: flex;
+    flex-direction: column;
+    /* CHANGE: Re-align text items to the left within the heading box */
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+
 
 /* 3. Logo Box: INCREASED SIZE */
 .logo-box img {
